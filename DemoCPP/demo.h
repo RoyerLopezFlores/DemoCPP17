@@ -51,7 +51,16 @@ void DemoInvoke();
 void DemoMultiBase1();
 void DemoMultiBase2();         // # Pending Er !
 void DemoVirtual();
-
+/**
+* @brief Ejemplo de uso de recorridos mediante fold expressions.
+*
+* Construye un árbol binario y demuestra tres formas equivalentes
+* de acceder a un nodo:
+*
+* - Node::traverse(...)
+* - Operador ->*
+* - Acceso directo mediante miembros
+*/
 void DemoFoldTraverse();
 void DemoPrintAuto();
 
@@ -170,6 +179,13 @@ void DemoTraits();
 void DemoInnerProduct();
 
 void DemoSmartPtr();
+
+/**
+* @brief Ejecuta las demostraciones relacionadas con expresiones regulares.
+*
+* Invoca los ejemplos básicos de coincidencia mediante `std::regex_match`
+* y acceso a grupos capturados utilizando `std::match_results`.
+*/
 void DemoRegex();
 
 void DemoAmpersand();

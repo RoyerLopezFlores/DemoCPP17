@@ -626,6 +626,21 @@ void DemoVirtual()
 
 //Variadic
 // traverse tree, using fold expression:
+
+/**
+* @brief Recorre una secuencia de nodos utilizando punteros a miembros.
+*
+* Aplica una fold expression sobre el operador `->*` para acceder
+* sucesivamente a los miembros especificados en `paths`.
+*
+* @tparam T Tipo del nodo inicial.
+* @tparam TP Secuencia de punteros a miembros.
+*
+* @param np Nodo inicial.
+* @param paths Ruta a recorrer.
+*
+* @return Nodo alcanzado tras seguir la ruta especificada.
+*/
 template<typename T, typename ... TP>
 static Node* traversex (T np, TP ... paths)
 {
@@ -2615,6 +2630,13 @@ void DemoSmartPtr()
 #include <string>
 #include <regex>
 
+/**
+ * @brief Demuestra el uso básico de `std::regex_match`.
+ *
+ * Realiza una coincidencia completa entre una cadena y una expresión
+ * regular utilizando `std::smatch`, mostrando la coincidencia completa
+ * y los grupos de captura obtenidos.
+ */
 void DemoRegexBasics()
 {
     std::string s ("subject");
@@ -2633,7 +2655,14 @@ void DemoRegexBasics()
 #include <iostream>
 #include <string>
 #include <regex>
-
+/**
+ * @brief Demuestra el acceso a las subcoincidencias mediante
+ *        `std::match_results::operator[]`.
+ *
+ * Utiliza `std::cmatch` para almacenar los resultados de una expresión
+ * regular aplicada sobre una cadena C (`const char*`) e imprime el
+ * contenido y longitud de cada grupo capturado.
+ */
 void DemoRegexOperators()
 {
     std::cmatch m;

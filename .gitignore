@@ -1,1 +1,6 @@
 DemoCPP/main.o
+*.exe
+*.md
+docs/
+.vscode/
+Makefile
